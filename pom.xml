@@ -51,6 +51,7 @@
       <maven-javadoc-plugin.version>3.6.0</maven-javadoc-plugin.version>
       <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
       <sparkVersion>3.5.0</sparkVersion>
+      <scalaVersion>2.12</scalaVersion>
    </properties>
    <dependencies>
       <dependency>
@@ -60,7 +61,7 @@
       </dependency>
       <dependency>
          <groupId>io.openlineage</groupId>
-         <artifactId>openlineage-spark_2.12</artifactId>
+         <artifactId>openlineage-spark_${scalaVersion}</artifactId>
          <version>${openLineageVersion}</version>
       </dependency>
       <dependency>
@@ -108,7 +109,7 @@
       <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-core -->
       <dependency>
          <groupId>org.apache.spark</groupId>
-         <artifactId>spark-sql_2.12</artifactId>
+         <artifactId>spark-sql_${scalaVersion}</artifactId>
          <version>${sparkVersion}</version>
       </dependency>
    </dependencies>
@@ -166,7 +167,7 @@
                   <configuration>
                      <artifactSet>
                         <includes>
-                           <include>io.openlineage:openlineage-spark_2.12</include>
+                           <include>io.openlineage:openlineage-spark_${scalaVersion}</include>
                         </includes>
                      </artifactSet>
                   </configuration>
