@@ -125,6 +125,16 @@ public final class OpenMetadataTransport extends Transport implements Closeable 
   }
 
   @Override
+  public void emit(@NonNull OpenLineage.DatasetEvent datasetEvent) {
+    log.debug("DatasetEvent emit is not supported by OpenMetadataTransport");
+  }
+
+  @Override
+  public void emit(@NonNull OpenLineage.JobEvent jobEvent) {
+    log.debug("JobEvent emit is not supported by OpenMetadataTransport");
+  }
+
+  @Override
   public void emit(@NonNull OpenLineage.RunEvent runEvent) {
     try {
       log.debug(
