@@ -20,11 +20,11 @@ package org.openmetadata.spark.agent;
 
 import static io.openlineage.spark.agent.util.SparkConfUtils.findSparkConfigKey;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import io.openlineage.client.OpenLineageClientUtils;
+import io.openlineage.spark.shaded.com.fasterxml.jackson.core.type.TypeReference;
+import io.openlineage.spark.shaded.com.fasterxml.jackson.databind.ObjectMapper;
+import io.openlineage.spark.shaded.com.fasterxml.jackson.databind.node.ArrayNode;
+import io.openlineage.spark.shaded.com.fasterxml.jackson.databind.node.ObjectNode;
 import io.openlineage.spark.agent.UrlParser;
 import io.openlineage.spark.api.SparkOpenLineageConfig;
 import java.io.ByteArrayInputStream;

@@ -51,14 +51,9 @@
       <maven-javadoc-plugin.version>3.6.0</maven-javadoc-plugin.version>
       <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
       <sparkVersion>3.5.0</sparkVersion>
-      <scalaVersion>2.12</scalaVersion>
+      <scalaVersion>2.13</scalaVersion>
    </properties>
    <dependencies>
-      <dependency>
-         <groupId>io.openlineage</groupId>
-         <artifactId>openlineage-java</artifactId>
-         <version>${openLineageVersion}</version>
-      </dependency>
       <dependency>
          <groupId>io.openlineage</groupId>
          <artifactId>openlineage-spark_${scalaVersion}</artifactId>
@@ -170,6 +165,9 @@
                            <include>io.openlineage:openlineage-spark_${scalaVersion}</include>
                         </includes>
                      </artifactSet>
+                     <transformers>
+                        <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                     </transformers>
                   </configuration>
                </execution>
             </executions>
